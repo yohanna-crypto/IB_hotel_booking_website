@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ivory Bay | Stays with you</title>
+
+<style>
+
+  body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background:
+  linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+  url("images/ritz-carlton.jpg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 10;
+  background: transparent;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #D8B86A;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 45px;
+  z-index: 11;
+}
+
+.hero-text {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero h2 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 20px;
+}
+
+.booking {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.booking input,
+.booking button {
+  padding: 12px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.booking button {
+  background: #0A1D37;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.booking button:hover {
+  background-color: #264470;
+  color: #E0E0E0;
+}
+
+#about {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  width: 250px;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  
+  nav {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+  nav a {
+  margin: 8px;
+  font-size: 14px;
+}
+
+  .hero-text {
+  top: 30%;
+  width: 90%;
+}
+
+  .hero h2 {
+  font-size: 26px;
+}
+
+  .hero p {
+  font-size: 16px;
+}
+
+  .booking {
+  top: 55%;
+  width: 100%;
+}
+
+  .booking input,
+  .booking button {
+  width: 80%;
+  max-width: 300px;
+}
+
+  #about {
+  width: 90%;
+  left: 5%;
+  bottom: 70px;
+}
+
+  footer {
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+}
+
+  .logo {
+  width: 35px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="booking_page.html">Booking</a>
+    <a href="contact_us_page.html">Contact</a>
+    <a href="about_us_page.html">About Us</a>
+    <a href="service_page.html">Services</a>
+  </nav>
+
+  <div class="hero-text">
+    <h2>Welcome to IVORY BAY</h2>
+    <h3>ivory stays stay with you</h3>
+    <p>Luxury & Comfort in the Heart of langano</p>
+  </div>
+
+  <div class="booking">
+    <form>
+      <input type="date" required>
+      <input type="date" required>
+      <input type="number" placeholder="Guests" min="1" required>
+
+      <button type="button" onclick="window.location.href='booking_page.html'">
+        Check Availability
+      </button>
+    </form>
+  </div>
+
+  <section id="about">
+    <p>Experience world-class hospitality with modern amenities, fine dining, and breathtaking views.</p>
+  </section>
+
+  <footer>
+    <p>@ 2026 IVORY BAY HOTEL. All rights reserved.</p>
+  </footer>
+
+</section>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a08e024cf689a1c314bbd35/1jopan3p9';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

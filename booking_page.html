@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ivory Bay - Booking</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Poppins;
+background:#fff8e7;
+background-size:cover;
+background-position:center;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.back-btn {
+  position: fixed;
+  left: 10px;
+  right: 0px;
+  top: 0px;
+  width: 60px;
+  height: 30px;
+  background-color: #F5E6C8;
+  border: 1px solid #d8c3a5;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-btn:hover {
+  background-color: #e8d6b8;
+}
+
+.booking-container{
+background:rgba(255,255,255,0.9);
+padding:40px;
+border-radius:20px;
+width:100%;
+max-width:600px;
+box-shadow:0 20px 50px rgba(0,0,0,0.5);
+}
+
+header h1{
+font-family:Great Vibes;
+font-size:64px;
+color:#b08968;
+text-align:center;
+}
+
+header p{
+text-align:center;
+color:#666;
+margin-bottom:30px;
+font-size:14px;
+}
+
+h3{
+color:#b08968;
+margin:20px 0 10px 0;
+border-bottom:1px solid #ddd;
+padding-bottom:5px;
+}
+
+.input-row{
+display:flex;
+gap:15px;
+}
+
+.input-group{
+flex:1;
+margin-bottom:15px;
+}
+
+label{
+display:block;
+margin-bottom:5px;
+color:#444;
+font-size:13px;
+}
+
+input,select{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+width:100%;
+padding:18px;
+background:#b08968;
+color:white;
+border:none;
+border-radius:8px;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+}
+
+button:hover{
+background:#7f5539;
+}
+
+@media (max-width: 768px) {
+
+body {
+  padding: 10px;
+}
+
+.booking-container{
+  padding: 20px;
+  border-radius: 15px;
+}
+
+header h1{
+  font-size: 40px;
+}
+
+header p{
+  font-size: 12px;
+}
+
+.input-row{
+  flex-direction: column;
+  gap: 0;
+}
+
+input, select{
+  font-size: 14px;
+}
+
+button{
+  font-size: 16px;
+  padding: 14px;
+}
+
+h3{
+  font-size: 16px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+  <button class="back-btn" onclick="goBack()">← Back</button>
+
+<div class="booking-container">
+
+<header>
+<h1>Ivory Bay</h1>
+<p>Luxury on the shores of Lake Langano</p>
+</header>
+
+<form id="bookingForm">
+
+<h3>Guest Information</h3>
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" id="name" required>
+</div>
+
+<div class="input-row">
+
+<div class="input-group">
+<label>Email</label>
+<input type="email" id="email" required>
+</div>
+
+<div class="input-group">
+<label>Phone</label>
+<input type="text" id="phone" required>
+</div>
+
+</div>
+
+<div class="input-group">
+<label>Address</label>
+<input type="text" id="address" required>
+</div>
+
+<h3>Travel Details</h3>
+
+<div class="input-row">
+
+<div class="input-group">
+<label>Check-In</label>
+<input type="date" required>
+</div>
+
+<div class="input-group">
+<label>Check-Out</label>
+<input type="date" required>
+</div>
+
+</div>
+
+<div class="input-group">
+<label>Room Preference</label>
+
+<select>
+
+    <optgroup label="Single">
+        <option>Standard Single</option>
+        <option>Premium Single</option>
+    </optgroup>
+
+    <optgroup label="Deluxe">
+        <option>Executive Deluxe</option>
+        <option>Family Deluxe</option>
+        <option>Deluxe Premium</option>
+    </optgroup>
+
+    <optgroup label="Suite">
+        <option>Presidential Suite</option>
+        <option>Residential Suite</option>
+        <option>Honeymoon Suite</option>
+    </optgroup>
+
+</select>
+
+</div>
+
+<h3>Account Security</h3>
+
+<div class="input-group">
+<label>Password</label>
+<input type="password" id="password" required>
+</div>
+
+<button type="submit">Confirm Reservation</button>
+
+</form>
+
+</div>
+
+<script>
+
+var form = document.getElementById("bookingForm");
+
+form.onsubmit = function(e){
+
+e.preventDefault();
+
+var name = document.getElementById("name").value;
+var email = document.getElementById("email").value;
+var phone = document.getElementById("phone").value;
+var address = document.getElementById("address").value;
+var password = document.getElementById("password").value;
+
+if(name=="" || email=="" || phone=="" || address==""){
+alert("Please fill all guest information");
+return;
+}
+
+if(password.length<8){
+alert("Password must be at least 8 characters");
+return;
+}
+
+alert("Thank you "+name+"! Confirmation sent to "+email);
+
+}
+function goBack() {
+window.history.back();
+}
+</script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a08e024cf689a1c314bbd35/1jopan3p9';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ivory Bay - Contact Us</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      background:linear-gradient(to right, #f8f3eb, #efe3d2, #f8f3eb);
+      font-family:'Cormorant Garamond', serif;
+      color:#5c4632;
+    }
+
+    .back-btn {
+    position: fixed;
+    left: 0%;
+    right: 0px;
+    top: 0px;
+    width: 60px;
+    height: 30px;
+    background-color: #F5E6C8;
+    border: 1px solid #d8c3a5;
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  .back-btn:hover {
+    background-color: #e8d6b8;
+  }
+
+    .header{
+      text-align:center;
+      padding:50px 20px 20px;
+    }
+
+    .header h1{
+      font-size:80px;
+      color:#b89b72;
+      font-family:'Great Vibes', cursive;
+      text-shadow:0px 2px 10px rgba(184,155,114,0.3);
+    }
+
+    .header p{
+      font-size:24px;
+      width:70%;
+      margin:auto;
+      line-height:40px;
+      margin-top:10px;
+      color:#6d5844;
+    }
+
+    .team{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:30px;
+      padding:50px;
+    }
+
+    .card{
+      width:260px;
+      background:#fffaf4;
+      border-radius:25px;
+      padding:25px;
+      text-align:center;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      transition:0.4s;
+      border:1px solid #e8d7c1;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 15px 35px rgba(184,155,114,0.25);
+    }
+
+    .card img{
+      width:130px;
+      height:130px;
+      border-radius:50%;
+      object-fit:cover;
+      border:4px solid #d8c0a5;
+      max-width:100%;
+    }
+
+    .card h2{
+      margin-top:15px;
+      font-size:38px;
+      font-family:'Great Vibes', cursive;
+      color:#b08968;
+    }
+
+    .position{
+      font-size:22px;
+      margin-top:5px;
+      color:#8a6d52;
+      font-style:italic;
+    }
+
+    .info{
+      margin-top:15px;
+      line-height:32px;
+      font-size:20px;
+      color:#5c4632;
+    }
+
+    .contact-section{
+      width:75%;
+      margin:40px auto 70px;
+      background:#fffaf4;
+      padding:45px;
+      border-radius:30px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.08);
+      border:1px solid #e8d7c1;
+    }
+
+    .contact-section h2{
+      text-align:center;
+      font-size:60px;
+      color:#b08968;
+      font-family:'Great Vibes', cursive;
+      margin-bottom:25px;
+    }
+
+    .contact-section p{
+      text-align:center;
+      font-size:22px;
+      margin-bottom:30px;
+      color:#6d5844;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:18px;
+      margin-top:15px;
+      border:none;
+      border-radius:18px;
+      background:#f6ede2;
+      font-size:18px;
+      color:#5c4632;
+      font-family:'Cormorant Garamond', serif;
+      outline:none;
+    }
+
+    textarea{
+      height:160px;
+      resize:none;
+    }
+
+    button{
+      display:block;
+      margin:30px auto 0;
+      padding:15px 45px;
+      border:none;
+      border-radius:30px;
+      background:#c7a27c;
+      color:white;
+      font-size:28px;
+      cursor:pointer;
+      font-family:'Great Vibes', cursive;
+      transition:0.3s;
+      box-shadow:0 5px 15px rgba(176,137,104,0.3);
+    }
+
+    button:hover{
+      background:#b08968;
+      transform:scale(1.05);
+    }
+
+    footer{
+      text-align:center;
+      padding:20px;
+      background:#eadcc8;
+      color:#8a6d52;
+      font-size:30px;
+      font-family:'Great Vibes', cursive;
+      letter-spacing:2px;
+    }
+
+    @media (max-width: 768px) {
+
+      .header h1{
+        font-size:50px;
+      }
+
+      .header p{
+        width:90%;
+        font-size:18px;
+        line-height:28px;
+      }
+
+      .team{
+        padding:20px;
+        gap:20px;
+      }
+
+      .card{
+        width:90%;
+      }
+
+      .card h2{
+        font-size:30px;
+      }
+
+      .position{
+        font-size:18px;
+      }
+
+      .info{
+        font-size:16px;
+        line-height:26px;
+      }
+
+      .contact-section{
+        width:90%;
+        padding:25px;
+      }
+
+      .contact-section h2{
+        font-size:40px;
+      }
+
+      .contact-section p{
+        font-size:16px;
+      }
+
+      button{
+        font-size:22px;
+        padding:12px 30px;
+      }
+
+      footer{
+        font-size:22px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <button class="back-btn" onclick="goBack()">← Back</button>
+
+
+  <div class="header">
+    <h1>Ivory Bay</h1>
+    <p>
+      At Ivory Bay, elegance meets comfort. Our team is always ready to assist you
+      and make every moment of your stay unforgettable.
+    </p>
+  </div>
+
+  <div class="team">
+
+    <div class="card">
+      <img src="images/photo_5_2026-05-17_14-42-59.jpg" alt="Manager">
+      <h2>Andinet Kibru</h2>
+      <div class="position">Hotel Manager</div>
+      <div class="info">📞 +251 11 345 5678 <br> ✉ AndinetK@ivorybay.com</div>
+    </div>
+
+    <div class="card">
+      <img src="images/photo_4_2026-05-17_14-42-59.jpg" alt="Guest Relations Officer">
+      <h2>Lily Chen</h2>
+      <div class="position">Guest Relations Officer</div>
+      <div class="info">📞 +251 12 354 6987 <br> ✉ Lily@ivorybay.com</div>
+    </div>
+
+    <div class="card">
+      <img src="images/photo_9_2026-05-17_14-42-59.jpg" alt="Reservation Officer">
+      <h2>Saron Abebe</h2>
+      <div class="position">Reservation Officer</div>
+      <div class="info">📞 +251 12 315 1045 <br> ✉ SariA@ivorybay.com</div>
+    </div>
+
+    <div class="card">
+      <img src="images/photo_2026-05-17_17-06-46.jpg" alt="Event Planner">
+      <h2>James Carter</h2>
+      <div class="position">Event and Conference Coordinator</div>
+      <div class="info">📞 +251 11 245 9456 <br> ✉ jamesCa@ivorybay.com</div>
+    </div>
+
+    <div class="card">
+      <img src="images/photo_8_2026-05-17_14-42-59.jpg" alt="Receptionist">
+      <h2>Lidya Tamiru</h2>
+      <div class="position">Front Desk Receptionist</div>
+      <div class="info">📞 +251 11 345 7644 <br> ✉ LiduT@ivorybay.com</div>
+    </div>
+
+    <div class="card">
+      <img src="images/photo_10_2026-05-17_14-42-59.jpg" alt="Restaurant Manager">
+      <h2>John Philips</h2>
+      <div class="position">Restaurant Manager</div>
+      <div class="info">📞 +251 11 456 8902 <br> ✉ JohnPhilips@ivorybay.com</div>
+    </div>
+
+    <div class="card">
+      <img src="images/photo_1_2026-05-17_14-42-59.jpg" alt="Customer support">
+      <h2>Addis Alemayew</h2>
+      <div class="position">Customer Support</div>
+      <div class="info">📞 +251 11 867 4532 <br> ✉ Addis@ivorybay.com</div>
+    </div>
+
+  </div>
+
+  <div class="contact-section">
+
+    <h2>Send Us A Message</h2>
+
+    <p>
+      We would love to hear from you. Please fill out the form below
+      and our team will respond as soon as possible.
+    </p>
+
+    <form onsubmit="showAlert(event)">
+      <input type="text" placeholder="Enter Your Full Name" required>
+      <input type="email" placeholder="Enter Your Email Address" required>
+      <textarea placeholder="Write your message here..." required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+  </div>
+
+  <footer>
+    © 2026 Ivory Bay Luxury Hotel
+  </footer>
+
+  <script>
+    function showAlert(event){
+      event.preventDefault();
+      alert("Thank you for contacting Ivory Bay. Your message has been sent successfully!");
+    }
+    function goBack() {
+    window.history.back();
+}
+  </script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a08e024cf689a1c314bbd35/1jopan3p9';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>
